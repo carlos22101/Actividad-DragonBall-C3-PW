@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginModule } from './login/login.module';
 import { InicioModule } from './inicio/inicio.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { InicioModule } from './inicio/inicio.module';
     BrowserModule,
     AppRoutingModule,
     LoginModule,
-    InicioModule
+    InicioModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

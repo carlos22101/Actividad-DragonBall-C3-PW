@@ -10,16 +10,16 @@ export class NombreInputComponent {
   nombre: string = '';
   nombreValido: boolean = false;
 
-  constructor( private router : Router) {}
+  constructor(private router: Router) { }
 
   validarNombre() {
-    const regex = /^[a-zA-Z\s]*$/;
-    this.nombreValido = regex.test(this.nombre);
+    const regex = /^[a-zA-Z0-9\s]*$/;
+    this.nombreValido = regex.test(this.nombre) && this.nombre.trim().length > 0;
   }
 
   iniciarAplicacion() {
     if (this.nombreValido) {
-      this.router.navigate(['/Dashboard'])
+      this.router.navigate(['/inicio']);
     }
   }
 }

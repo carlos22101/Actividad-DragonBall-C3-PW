@@ -19,7 +19,7 @@ export class NombreInputComponent {
 
   iniciarAplicacion() {
     if (this.nombreValido) {
-      this.router.navigate(['/inicio']);
+      this.router.navigate(['/Dashboard']);
     }
   }
 }
